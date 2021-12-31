@@ -3,7 +3,7 @@ import React from 'react'
 export const JournalScreen = () => {
     return (
         <div>
-            <h1>Login Screen</h1>
+            <h1>Journal Screen</h1>
         </div>
     )
 }
