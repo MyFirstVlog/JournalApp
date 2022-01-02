@@ -8,7 +8,9 @@ import {
     Redirect
 } from 'react-router-dom'
 import { login } from '../actions/auth'
+import { setNote } from '../actions/notes'
 import { JournalScreen } from '../components/journal/JournalScreen'
+import { loadNotes } from '../helpers/loadNote'
 import { AuthRouter } from './AuthRouter'
 import { PrivateRoute } from './PrivateRoute'
 import { PublicRoute } from './PublicRoute'
@@ -24,11 +26,13 @@ export const AppRouter = () => {
     const [isLoggedIn, setisLoggedIn] = useState(false);
 
     useEffect(() => {
-        onAuthStateChanged(auth,(user)=> {
+        onAuthStateChanged(auth,async (user)=> {
             console.log({user});
             if(user?.uid){
                 dispatch(login(user.uid, user.displayName));
                 setisLoggedIn(true);
+                const notes = await loadNotes(user.uid);
+                dispatch(setNote(notes));
             }else{
                 setisLoggedIn(false);
             }
@@ -38,7 +42,7 @@ export const AppRouter = () => {
 
     if(checking) {
         return (
-            <h1>Espere...</h1>
+            <h1>Please Wait...</h1>
         )
     }
 

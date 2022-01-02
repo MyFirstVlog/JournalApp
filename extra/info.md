@@ -57,3 +57,7 @@ npm i validator
 ```Sweet Alert```
 
 https://sweetalert2.github.io/
+
+```Regla de firestore ```
+
+Colección, documento .... Esta es la regla que se debe seguir para 
