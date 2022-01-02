@@ -33,3 +33,5 @@ State dado por el store, cumple la misma info, view recibe la info y la usa, en 
 
 **Se provee el store a la parte superior de la app, tratando de dejar limpio index.js, entinces se envia JournalApp.js
 
+// Para hacer uso de las dev tools de google mirar aqui:https://github.com/zalmoxisus/redux-devtools-extension#usage
+
