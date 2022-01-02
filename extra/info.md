@@ -53,3 +53,7 @@ middleware especializado, encargada
 ```Validator```
 
 npm i validator
+
+```Sweet Alert```
+
+https://sweetalert2.github.io/
