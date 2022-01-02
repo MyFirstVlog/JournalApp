@@ -35,3 +35,17 @@ State dado por el store, cumple la misma info, view recibe la info y la usa, en 
 
 // Para hacer uso de las dev tools de google mirar aqui:https://github.com/zalmoxisus/redux-devtools-extension#usage
 
+
+```Instalación de firebase y firestore```
+
+--> npm i firebase
+
+```Creación de middleware para tareas asincronas```
+
+mirar imagen adjunta, especialmente, para motivos de autenticación. Desde el middleware hace las peticiones asicnronas y luego las envia al dispatch pues  esta ultima recibe solo sincronas
+
+```Instalar redux thunk```
+
+middleware especializado, encargada 
+
+#npm install redux-thunk#
