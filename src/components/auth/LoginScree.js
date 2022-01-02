@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {startGoogleLogin, startLoginEmailPassword } from '../../actions/auth'
 import { useForm } from '../../hooks/useForm'
@@ -8,6 +8,8 @@ export const LoginScreen = () => {
 
     //para hacer dispatch de la aciion de auth cuando el form haga submit
     const dispatch = useDispatch();
+    const {loading} = useSelector(state => state.ui)
+    console.log({loading})
 
     const [formValues, handleInputChange] = useForm({
         email: 'nando@gmail.com',
@@ -50,6 +52,7 @@ export const LoginScreen = () => {
                 <button
                     className='btn btn-primary btn-block'
                     type="submit"
+                    disabled={loading}
                 >
                     Login
                 </button>
