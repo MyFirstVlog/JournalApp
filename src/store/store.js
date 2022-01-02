@@ -1,6 +1,7 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import { authReducer } from '../reducer/authReducer';
+import { uiReducer } from '../reducer/uiReducer';
 
 //!Por doc en create store solo se puede un middle ware con esta linea es posible aumentar
 
@@ -8,7 +9,8 @@ const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOO
 
 
 const reducers = combineReducers({
-    auth: authReducer
+    auth: authReducer,
+    ui: uiReducer
 })
 
 export const store = createStore(

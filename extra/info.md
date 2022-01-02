@@ -49,3 +49,7 @@ mirar imagen adjunta, especialmente, para motivos de autenticación. Desde el mi
 middleware especializado, encargada 
 
 #npm install redux-thunk#
+
+```Validator```
+
+npm i validator
