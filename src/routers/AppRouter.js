@@ -8,9 +8,8 @@ import {
     Redirect
 } from 'react-router-dom'
 import { login } from '../actions/auth'
-import { setNote } from '../actions/notes'
+import { startLoadingNotes } from '../actions/notes'
 import { JournalScreen } from '../components/journal/JournalScreen'
-import { loadNotes } from '../helpers/loadNote'
 import { AuthRouter } from './AuthRouter'
 import { PrivateRoute } from './PrivateRoute'
 import { PublicRoute } from './PublicRoute'
@@ -30,9 +29,8 @@ export const AppRouter = () => {
             console.log({user});
             if(user?.uid){
                 dispatch(login(user.uid, user.displayName));
-                setisLoggedIn(true);
-                const notes = await loadNotes(user.uid);
-                dispatch(setNote(notes));
+                setisLoggedIn(true);                
+                dispatch(startLoadingNotes(user.uid));
             }else{
                 setisLoggedIn(false);
             }

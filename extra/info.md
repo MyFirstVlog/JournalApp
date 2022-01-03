@@ -61,3 +61,7 @@ https://sweetalert2.github.io/
 ```Regla de firestore ```
 
 Colección, documento .... Esta es la regla que se debe seguir para 
+
+```Moment.js```
+
+libreria para manejar fechas
